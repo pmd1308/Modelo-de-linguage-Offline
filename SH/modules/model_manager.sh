@@ -10,6 +10,10 @@ models=(
 
 # Function to add a model to Ollama
 add_ollama_model() {
+    echo "Available models:"
+    for model in "${!models[@]}"; do
+        echo "- $model"
+    done
     read -p "Enter the name of the model you want to add to Ollama: " model_name
     echo "Adding model $model_name to Ollama..."
     ollama pull "$model_name"

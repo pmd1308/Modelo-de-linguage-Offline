@@ -2,7 +2,7 @@
 Installing Ollama, Docker, Stable Diffusion and Pyenv
 EOF
 
-intall_ollama() {
+install_ollama() {
     # Install Ollama
     echo "Installing Ollama..."
     curl -fsSL https://ollama.com/install.sh | sh

@@ -9,6 +9,9 @@ source ./modules/resources_monitor.sh
 source ./modules/docker_setup.sh
 source ./modules/model_manager.sh
 
+# Trap to catch interrupt signal (Ctrl+C) and return to the main menu
+trap 'echo -e "\nOperation cancelled. Returning to main menu..."' SIGINT
+
 # Main function to orchestrate the entire process
 main() {
     echo "Choose one of the options below:"
@@ -28,25 +31,32 @@ while true; do
     main
     case $choice in
         1)
-            install_ollama
+            echo "Installing Ollama. Press Ctrl+C to cancel."
+            install_ollama || echo "Operation was cancelled."
             ;;
         2)
-            add_ollama_model
+            echo "Adding a model to Ollama. Press Ctrl+C to cancel."
+            add_ollama_model || echo "Operation was cancelled."
             ;;
         3)
-            monitor_resources
+            echo "Monitoring system resources. Press Ctrl+C to cancel."
+            monitor_resources || echo "Operation was cancelled."
             ;;
         4)
-            install_docker
+            echo "Installing Docker. Press Ctrl+C to cancel."
+            install_docker || echo "Operation was cancelled."
             ;;
         5)
-            run_open_webui
+            echo "Running the Open WebUI Docker container. Press Ctrl+C to cancel."
+            run_open_webui || echo "Operation was cancelled."
             ;;
         6)
-            install_stable_diffusion
+            echo "Installing Stable Diffusion and Pyenv. Press Ctrl+C to cancel."
+            install_stable_diffusion || echo "Operation was cancelled."
             ;;
         7)
-            run_ollama_model
+            echo "Running an Ollama model. Press Ctrl+C to cancel."
+            run_ollama_model || echo "Operation was cancelled."
             ;;
         8)
             echo "Exiting the script. Bye!"
