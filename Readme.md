@@ -4,7 +4,7 @@
 
 Este projeto é um hub centralizado para gerenciar, instalar e executar inteligência artificial localmente. Ele oferece uma interface para a instalação de software necessário, gerenciamento de modelos, monitoramento de hardware e execução de uma interface de usuário web (WebUI).
 
-No caso, ele é derivado desse tutorial: [host ALL your AI locally](https://youtu.be/Wjrdr0NU4Sk), e fiz para resolver a falta de Inteligencia artificial na empresa que trabalho, apenas para definir como portifolio.
+No caso, ele é derivado desse tutorial: [host ALL your AI locally](https://youtu.be/Wjrdr0NU4Sk), e fiz para resolver a falta de Inteligencia artificial na empresa que trabalho, apenas para definir como portifolio.Bom, pelo menos deduzi o que poderia resolver kkkkkkk. Isso foi próprio, só de estudo de cenário.
 
 No caso, o que bolei foi um script interativo para instalar em servers Linux. Assim, qualquer computador na rede pode consumir modelos de acordo com o setor, podendo cada modelo ser treinado com documentações de procedimentos e anomalias que precisam ser corrigidas. (já pensei numa "rede neural" para isso)
 
@@ -26,11 +26,12 @@ flowchart TD
     A[Início] --> B[Configurar VPN]
     B --> C[Instalar Dependências]
     C --> D[Instalar Ollama]
-    D --> E[Adicionar Modelos ao Ollama(lista em model_manager.sh)]
+    D --> E[Adicionar Modelos ao Ollama]
     E --> F[Instalar Docker]
     F --> G[Rodar Open WebUI]
     G --> H[Monitorar Recursos]
     H --> I[Fim]
+
 ```
 
 ### 2. Fluxograma de Classes Representando Cliente e Servidor
