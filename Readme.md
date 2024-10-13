@@ -26,11 +26,12 @@ flowchart TD
     A[Início] --> B[Configurar VPN]
     B --> C[Instalar Dependências]
     C --> D[Instalar Ollama]
-    D --> E[Adicionar Modelos ao Ollama(lista em model_manager.sh)]
+    D --> E[Adicionar Modelos ao Ollama]
     E --> F[Instalar Docker]
     F --> G[Rodar Open WebUI]
     G --> H[Monitorar Recursos]
     H --> I[Fim]
+
 ```
 
 ### 2. Fluxograma de Classes Representando Cliente e Servidor
